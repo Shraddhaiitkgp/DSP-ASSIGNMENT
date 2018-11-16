@@ -1,29 +1,13 @@
-#Energy compression comparision between different transforms by plotting them 
+file_compression and file decompression
 
-.......
-problem statement 
+#compressor fn  compresses signal and store it in file_name
 
-.take a 64 length sequence do dft,dct,haar transform to it.
+#decompressor fn decompresses the files and prints the decompresses version of signal
 
-.make L high frequency components to zero
+#L is no of samples to drop
 
-.vary L from 0 to length 
+#sample_from_wav gives the 1 second input sample array from audio signal
 
-.for each L compute inverse transform after making L components from dft,dct,haar to zero
+#xdcthaar drops L samples from the array given to it
 
-.compute mse between original sample and value from inverse
-
-plot mse vs L 
-.......
-
-....
-$$ implementation details
-function dft,dct,haar,idft,idct,ihaar compute matrices for transforms
-
-function generalised fourier transform and inverse generalised fourier transform computes dft,dct,haar transform and inverse dft,dct,haar on transformed sample
-
-mse calculates error mean square error
-
-dot_product simply computes dot product between 2 vectors and divide it by vector length
-
-xdft,xdcthaar makes L components to zero
+#driver program drives the program calling compressor and then decompressor
