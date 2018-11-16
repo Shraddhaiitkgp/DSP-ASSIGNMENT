@@ -1,13 +1,21 @@
-file_compression and file decompression
+#audio wavelet signal
 
-#compressor fn  compresses signal and store it in file_name
+....
+energy compaction of 1ms of audio wavelet signal
+....
 
-#decompressor fn decompresses the files and prints the decompresses version of signal
 
-#L is no of samples to drop
+....
+sample_from_wav gives 1 second audio sample array
 
-#sample_from_wav gives the 1 second input sample array from audio signal
+generalised_advanced_transform computes DFT and DCT
 
-#xdcthaar drops L samples from the array given to it
+generalised_advanced_inverse_transform computes iDFT and iDCT
 
-#driver program drives the program calling compressor and then decompressor
+xdcthaar makes L samples to 0 in DCT
+
+xmdft makes L sample to 0 in DFT
+
+mse_advanced calculates error for different values of L
+
+.....
